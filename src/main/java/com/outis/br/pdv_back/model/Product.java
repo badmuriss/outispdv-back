@@ -1,10 +1,9 @@
-package com.outis.br.pdv_back.domain.model;
+package com.outis.br.pdv_back.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.sql.Clob;
 
 @Entity
 @Table(name = "product")

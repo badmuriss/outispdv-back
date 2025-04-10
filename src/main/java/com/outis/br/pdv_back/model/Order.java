@@ -1,6 +1,6 @@
-package com.outis.br.pdv_back.domain.model;
+package com.outis.br.pdv_back.model;
 
-import com.outis.br.pdv_back.domain.model.enums.Status;
+import com.outis.br.pdv_back.model.enums.Status;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,7 +18,7 @@ public class Order {
 
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private Status status = Status.PROCESSED;
 
     @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
     private LocalDateTime createdAt;

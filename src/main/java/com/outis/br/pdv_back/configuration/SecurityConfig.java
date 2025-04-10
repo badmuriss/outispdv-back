@@ -20,8 +20,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .formLogin(withDefaults())
-                .headers(headers -> headers.frameOptions().disable()) // permite iframe do console
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**")); // desabilita CSRF no h2
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"));
 
         return http.build();
     }
