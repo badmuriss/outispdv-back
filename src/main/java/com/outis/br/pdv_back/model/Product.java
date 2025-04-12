@@ -31,4 +31,7 @@ public class Product {
     @JoinColumn(name="category_id")
     private Category category;
 
+    @Column(name = "barcode", unique = true)
+    private String barcode;
+
 }

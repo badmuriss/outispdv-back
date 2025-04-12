@@ -1,4 +1,4 @@
-package com.outis.br.pdv_back.dto.orderitem;
+package com.outis.br.pdv_back.dto.ticketitem;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

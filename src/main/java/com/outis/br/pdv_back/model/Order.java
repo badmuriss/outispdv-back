@@ -1,6 +1,6 @@
 package com.outis.br.pdv_back.model;
 
-import com.outis.br.pdv_back.model.enums.Status;
+import com.outis.br.pdv_back.model.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,12 +18,12 @@ public class Order {
 
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
-    private Status status = Status.PROCESSED;
+    private OrderStatus status = OrderStatus.PROCESSED;
 
     @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems;
 
 }
