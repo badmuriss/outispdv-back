@@ -19,6 +19,8 @@ public record ProductCreateRequest(
 
         String photo,
 
-        String categoryName
+        String categoryName,
+
+        String barcode
 ) {
 }

@@ -12,7 +12,9 @@ public record ProductUpdateRequest(
 
         String photo,
 
-        String categoryName
+        String categoryName,
+
+        String barcode
 
 ) {
 }

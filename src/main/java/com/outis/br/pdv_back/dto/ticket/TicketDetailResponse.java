@@ -1,21 +1,27 @@
-package com.outis.br.pdv_back.dto.order;
+package com.outis.br.pdv_back.dto.ticket;
 
-import com.outis.br.pdv_back.dto.orderitem.OrderItemListResponse;
-import com.outis.br.pdv_back.model.enums.OrderStatus;
+import com.outis.br.pdv_back.dto.ticketitem.TicketItemListResponse;
+import com.outis.br.pdv_back.model.enums.TicketStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public record OrderDetailResponse(
+public record TicketDetailResponse(
 
         Long id,
 
-        OrderStatus status,
+        String code,
+
+        TicketStatus status,
 
         LocalDateTime createdAt,
 
-        List<OrderItemListResponse> orderItems,
+        String barcode,
+
+        Integer tableNumber,
+
+        List<TicketItemListResponse> ticketItems,
 
         BigDecimal total
 

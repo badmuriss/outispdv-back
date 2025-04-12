@@ -14,7 +14,9 @@ public record ProductDetailResponse(
 
         String description,
 
-        String photo
+        String photo,
+
+        String barcode
 
 ) {
 }
